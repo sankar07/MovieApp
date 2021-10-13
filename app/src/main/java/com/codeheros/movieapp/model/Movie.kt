@@ -3,6 +3,7 @@ package com.codeheros.movieapp.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 /**
  * Created by sankar on 2021-10-11.
@@ -15,5 +16,6 @@ data class Movie(
     val rating: String = "",
     val title: String = "",
     val posterURL: String = "",
-    val releaseDate: String = ""
+    val releaseDate: String = "",
+    val createdAt: String = System.currentTimeMillis().toString()
 )

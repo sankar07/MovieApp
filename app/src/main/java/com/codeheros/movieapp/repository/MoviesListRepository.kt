@@ -34,7 +34,10 @@ class MoviesListRepository @Inject constructor(
             generateMovieListCache(type, getMovieListFromRemote(page))
         }
 
-    private suspend fun generateMovieListCache(type: MovieListType, movies: List<Movie>) = movies.apply {
+    private suspend fun generateMovieListCache(
+        type: MovieListType,
+        movies: List<Movie>
+    ) = movies.apply {
         movieDaoDataSource.insertAll(this)
         cachesLifeManager.generateListCache(type)
     }
@@ -45,8 +48,8 @@ class MoviesListRepository @Inject constructor(
      * First, it proceeds to retrieve the index for the given move list and then
      * proceeds to read the cached movie data from the index movies Ids.
      */
-    private suspend fun getMoviesListFromLocal(): List<Movie> =
-        movieDaoDataSource.readAll()
+    private suspend fun getMoviesListFromLocal(): List<Movie> = movieDaoDataSource.readAll()
+
     
 
     /**

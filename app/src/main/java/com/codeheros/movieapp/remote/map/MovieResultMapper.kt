@@ -20,7 +20,8 @@ class MovieResultMapper(private val baseImageURL: String) : Mapper<MovieResult, 
         title = remote.title ?: "",
         posterURL = "$baseImageURL${remote.posterPath}",
         rating = getRatingPercentage(remote.voteAverage),
-        releaseDate = getUIReleaseDate(remote.releaseDate)
+        releaseDate = getUIReleaseDate(remote.releaseDate),
+        createdAt =System.currentTimeMillis().toString()
     )
 
     /**

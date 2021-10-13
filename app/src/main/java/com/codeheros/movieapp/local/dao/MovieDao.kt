@@ -19,6 +19,6 @@ interface MovieDao {
 
     @Query("DELETE FROM movies")
     suspend fun deleteAll()
-    @Query("SELECT * FROM movies")
+    @Query("SELECT * FROM movies ORDER BY createdAt")
     suspend fun readAll(): List<Movie>
 }
