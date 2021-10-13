@@ -1,12 +1,12 @@
-package me.sankar.movieslist.repository
+package com.codeheros.movieapp.repository
 
-import me.sankar.local.CachesLifeManager
+import com.codeheros.movieapp.local.CachesLifeManager
 import me.sankar.local.dao.MovieDao
-import me.sankar.movieslist.core.Movie
-import me.sankar.movieslist.core.MovieListType
-import me.sankar.movieslist.remote.TheMoviesDBApiService
-import me.sankar.movieslist.remote.map.Mapper
-import me.sankar.movieslist.remote.model.MovieResult
+import com.codeheros.movieapp.model.Movie
+import com.codeheros.movieapp.model.MovieListType
+import com.codeheros.movieapp.remote.TheMoviesDBApiService
+import com.codeheros.movieapp.remote.map.Mapper
+import com.codeheros.movieapp.remote.model.MovieResult
 import javax.inject.Inject
 
 /**
@@ -27,7 +27,7 @@ class MoviesListRepository @Inject constructor(
      *
      * @see MovieListType
      */
-    suspend fun getMoviesListBy(type: MovieListType,page:Int) =
+    suspend fun getMoviesListBy(type: MovieListType, page:Int) =
         if (page==1 && cachesLifeManager.listCacheIsValid(type)) {
             getMoviesListFromLocal()
         } else {

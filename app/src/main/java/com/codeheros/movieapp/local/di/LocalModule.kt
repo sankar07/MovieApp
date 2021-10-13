@@ -1,10 +1,10 @@
-package me.sankar.local.di
+package com.codeheros.movieapp.local.di
 
 import android.app.Application
 import dagger.Module
 import dagger.Provides
-import me.sankar.local.AppDatabase
-import me.sankar.local.CachesLifeManager
+import com.codeheros.movieapp.local.AppDatabase
+import com.codeheros.movieapp.local.CachesLifeManager
 
 /**
  * Created by sankar on 2021-10-11.

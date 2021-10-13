@@ -1,8 +1,8 @@
-package me.sankar.local
+package com.codeheros.movieapp.local
 
 import android.app.Application
 import android.content.Context
-import me.sankar.movieslist.core.MovieListType
+import com.codeheros.movieapp.model.MovieListType
 import java.util.Calendar
 import java.util.TimeZone
 import java.util.concurrent.TimeUnit

@@ -1,4 +1,4 @@
-package me.sankar.movieslist.utils
+package com.codeheros.movieapp.utils
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

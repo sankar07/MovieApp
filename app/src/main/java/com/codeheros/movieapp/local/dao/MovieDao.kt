@@ -1,11 +1,10 @@
 package me.sankar.local.dao
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import me.sankar.movieslist.core.Movie
+import com.codeheros.movieapp.model.Movie
 
 /**
  * Created by sankar on 2021-10-11.

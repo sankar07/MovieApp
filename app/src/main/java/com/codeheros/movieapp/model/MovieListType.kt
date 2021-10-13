@@ -1,4 +1,4 @@
-package me.sankar.movieslist.core
+package com.codeheros.movieapp.model
 
 /**
  * Created by sankar on 2021-10-11.

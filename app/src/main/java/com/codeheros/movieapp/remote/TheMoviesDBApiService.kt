@@ -1,8 +1,7 @@
-package me.sankar.movieslist.remote
+package com.codeheros.movieapp.remote
 
-import me.sankar.movieslist.remote.model.MovieSummary
-import me.sankar.movieslist.remote.model.MovieVideo
-import me.sankar.movieslist.remote.model.MoviesListResult
+import com.codeheros.movieapp.remote.model.MovieSummary
+import com.codeheros.movieapp.remote.model.MoviesListResult
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -26,10 +25,4 @@ interface TheMoviesDBApiService {
      */
     @GET("movie/{movie_id}")
     suspend fun getMovieDetails(@Path("movie_id") movieId: Int): MovieSummary
-
-    /**
-     * Retrieves the available videos for a given movie.
-     */
-    @GET("movie/{movie_id}/videos")
-    suspend fun getMovieVideos(@Path("movie_id") movieId: Int): MovieVideo
 }

@@ -1,9 +1,9 @@
-package me.sankar.movieslist.movielist
+package com.codeheros.movieapp.modules.movies
 
 import androidx.lifecycle.ViewModel
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import me.sankar.movieslist.domain.GetMovieListUseCase
+import com.codeheros.movieapp.domain.GetMovieListUseCase
 import javax.inject.Inject
 
 /**

@@ -1,19 +1,25 @@
-package me.sankar.movieslist
+package com.codeheros.movieapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.codeheros.movieapp.R
+import androidx.navigation.ui.NavigationUI
 import dagger.android.AndroidInjection
 
 class NavHostActivity : AppCompatActivity() {
-    private var navController: NavController? = null
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
         setContentView(R.layout.activity_nav_host)
         navController = findNavController(R.id.navHostFragment)
+        NavigationUI.setupActionBarWithNavController(this,navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        navController.navigateUp()
+        return super.onSupportNavigateUp()
     }
 }

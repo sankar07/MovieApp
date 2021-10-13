@@ -1,4 +1,4 @@
-package me.sankar.movieslist.remote.model
+package com.codeheros.movieapp.remote.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

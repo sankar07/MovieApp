@@ -1,10 +1,10 @@
-package me.sankar.local.dao
+package com.codeheros.movieapp.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import me.sankar.movieslist.core.MovieDetails
+import com.codeheros.movieapp.model.MovieDetails
 
 @Dao
 interface MovieDetailsDao {

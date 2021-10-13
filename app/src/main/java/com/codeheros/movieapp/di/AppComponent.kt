@@ -1,13 +1,13 @@
-package me.sankar.movieslist.di
+package com.codeheros.movieapp.di
 
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.support.AndroidSupportInjectionModule
-import me.sankar.local.di.LocalModule
-import me.sankar.movieslist.MovieApplication
-import me.sankar.movieslist.remote.di.RemoteModule
+import com.codeheros.movieapp.local.di.LocalModule
+import com.codeheros.movieapp.MovieApplication
+import com.codeheros.movieapp.remote.di.RemoteModule
 import javax.inject.Singleton
 
 /**

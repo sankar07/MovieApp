@@ -1,4 +1,4 @@
-package me.sankar.local
+package com.codeheros.movieapp.local
 
 import android.content.Context
 import androidx.room.Database
@@ -7,17 +7,17 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.codeheros.movieapp.BuildConfig
 import me.sankar.local.dao.MovieDao
-import me.sankar.local.dao.MovieDetailsDao
+import com.codeheros.movieapp.local.dao.MovieDetailsDao
 import me.sankar.local.typeconverters.IntListTypeConverter
 import me.sankar.local.typeconverters.StringListTypeConverter
-import me.sankar.movieslist.core.Movie
-import me.sankar.movieslist.core.MovieDetails
+import com.codeheros.movieapp.model.Movie
+import com.codeheros.movieapp.model.MovieDetails
 
 /**
  * Created by sankar on 2021-10-11.
  */
 @Database(
-    entities = [Movie::class,MovieDetails::class],
+    entities = [Movie::class, MovieDetails::class],
     version = BuildConfig.VERSION_CODE,
     exportSchema = false
 )

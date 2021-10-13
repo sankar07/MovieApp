@@ -1,4 +1,4 @@
-package me.sankar.movieslist.remote.map
+package com.codeheros.movieapp.remote.map
 
 /**
  * Interface that helps reducing boilerplate code when

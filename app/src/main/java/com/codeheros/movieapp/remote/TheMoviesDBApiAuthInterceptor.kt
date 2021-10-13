@@ -1,4 +1,4 @@
-package me.sankar.movieslist.remote
+package com.codeheros.movieapp.remote
 
 import okhttp3.HttpUrl
 import okhttp3.Interceptor

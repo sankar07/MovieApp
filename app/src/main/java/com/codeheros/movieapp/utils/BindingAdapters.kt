@@ -1,4 +1,4 @@
-package me.sankar.movieslist.utils
+package com.codeheros.movieapp.utils
 
 import android.net.Uri
 import android.view.View

@@ -1,4 +1,4 @@
-package com.codeheros.movieapp.movies
+package com.codeheros.movieapp.modules.movies
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,9 +14,7 @@ import com.codeheros.movieapp.utils.openMovieDetails
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import me.sankar.movieslist.di.ViewModelFactory
-import me.sankar.movieslist.movielist.MovieListPagingAdapter
-import me.sankar.movieslist.movielist.MovieListViewModel
+import com.codeheros.movieapp.di.ViewModelFactory
 import javax.inject.Inject
 
 /**

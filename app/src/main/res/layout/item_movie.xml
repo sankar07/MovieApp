@@ -6,7 +6,7 @@
 
 		<variable
 			name="movie"
-			type="me.sankar.movieslist.core.Movie"/>
+			type="com.codeheros.movieapp.model.Movie"/>
 	</data>
 	<androidx.constraintlayout.widget.ConstraintLayout
 		android:id="@+id/movieRootLayout"

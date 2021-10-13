@@ -1,4 +1,4 @@
-package me.sankar.movieslist
+package com.codeheros.movieapp
 
 import android.app.Activity
 import android.app.Application
@@ -10,7 +10,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.HasServiceInjector
 import dagger.android.support.HasSupportFragmentInjector
-import me.sankar.movieslist.di.Injector
+import com.codeheros.movieapp.di.Injector
 import javax.inject.Inject
 
 class MovieApplication : Application(),HasActivityInjector, HasSupportFragmentInjector, HasServiceInjector {

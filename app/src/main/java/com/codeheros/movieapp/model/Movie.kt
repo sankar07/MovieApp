@@ -1,4 +1,4 @@
-package me.sankar.movieslist.core
+package com.codeheros.movieapp.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

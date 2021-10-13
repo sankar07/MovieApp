@@ -1,15 +1,15 @@
-package me.sankar.movieslist.domain
+package com.codeheros.movieapp.domain
 
 import androidx.paging.PagingSource
-import me.sankar.movieslist.core.Movie
-import me.sankar.movieslist.core.MovieListType
-import me.sankar.movieslist.repository.MoviesListRepository
+import com.codeheros.movieapp.model.Movie
+import com.codeheros.movieapp.model.MovieListType
+import com.codeheros.movieapp.repository.MoviesListRepository
 import javax.inject.Inject
 
 /**
  * Retrieves a list of movies by a given type.
  *
- * Created by sankar on 2021-10-11.
+ * Created by sankar on 2021-10-13.
  */
 class GetMovieListUseCase @Inject constructor(private val repository: MoviesListRepository)
     :PagingSource<Int, Movie>(){

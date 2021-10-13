@@ -1,4 +1,4 @@
-package me.sankar.movieslist.di
+package com.codeheros.movieapp.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

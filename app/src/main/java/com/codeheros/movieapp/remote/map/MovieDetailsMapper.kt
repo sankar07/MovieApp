@@ -1,8 +1,8 @@
-package me.sankar.movieslist.remote.map
+package com.codeheros.movieapp.remote.map
 
-import me.sankar.movieslist.core.MovieDetails
-import me.sankar.movieslist.remote.model.MovieGenre
-import me.sankar.movieslist.remote.model.MovieSummary
+import com.codeheros.movieapp.model.MovieDetails
+import com.codeheros.movieapp.remote.model.MovieGenre
+import com.codeheros.movieapp.remote.model.MovieSummary
 
 class MovieDetailsMapper(private val baseImageURL: String) : Mapper<MovieSummary, MovieDetails> {
     var movieVideoKey = ""

@@ -1,7 +1,7 @@
-package me.sankar.movieslist.remote.map
+package com.codeheros.movieapp.remote.map
 
-import me.sankar.movieslist.core.Movie
-import me.sankar.movieslist.remote.model.MovieResult
+import com.codeheros.movieapp.model.Movie
+import com.codeheros.movieapp.remote.model.MovieResult
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

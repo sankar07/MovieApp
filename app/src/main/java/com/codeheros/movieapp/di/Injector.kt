@@ -1,9 +1,9 @@
-package me.sankar.movieslist.di
+package com.codeheros.movieapp.di
 
 import android.app.Application
 import com.codeheros.movieapp.BuildConfig
-import me.sankar.local.di.LocalModule
-import me.sankar.movieslist.remote.di.RemoteModule
+import com.codeheros.movieapp.local.di.LocalModule
+import com.codeheros.movieapp.remote.di.RemoteModule
 
 /**
  * Created by sankar on 2021-10-11.
@@ -23,8 +23,7 @@ object Injector {
      * Singleton reference for the [AppComponent] class.
      */
     val component: AppComponent by lazy {
-        DaggerAppComponent
-            .builder()
+        DaggerAppComponent.builder()
             .application(app)
             .localModule(LocalModule(app))
             .remoteModule(

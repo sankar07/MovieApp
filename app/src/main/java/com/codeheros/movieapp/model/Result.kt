@@ -1,4 +1,4 @@
-package me.sankar.movieslist.core
+package com.codeheros.movieapp.model
 
 /**
  * Data class that transport a given payload from the Repository to the

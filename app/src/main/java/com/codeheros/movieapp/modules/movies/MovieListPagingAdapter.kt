@@ -1,4 +1,4 @@
-package me.sankar.movieslist.movielist
+package com.codeheros.movieapp.modules.movies
 
 import android.view.View
 import android.view.ViewGroup
@@ -6,14 +6,14 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.codeheros.movieapp.databinding.ItemMovieBinding
-import me.sankar.movieslist.core.Movie
-import me.sankar.movieslist.utils.layoutInflater
+import com.codeheros.movieapp.model.Movie
+import com.codeheros.movieapp.utils.layoutInflater
 
 class MovieListPagingAdapter(private val onMovieSelected: (Int, View) -> Unit = { movieId, view -> })
-    : PagingDataAdapter<Movie,MovieListPagingAdapter.MovieViewHolder> (MovieComparator){
+    : PagingDataAdapter<Movie, MovieListPagingAdapter.MovieViewHolder> (MovieComparator){
 
 
-    override fun onBindViewHolder(holder: MovieListPagingAdapter.MovieViewHolder,
+    override fun onBindViewHolder(holder: MovieViewHolder,
                                   position: Int) = holder.binding.run {
         movie = getItem(position)
         executePendingBindings()
@@ -23,7 +23,7 @@ class MovieListPagingAdapter(private val onMovieSelected: (Int, View) -> Unit = 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MovieListPagingAdapter.MovieViewHolder = MovieViewHolder(
+    ): MovieViewHolder = MovieViewHolder(
         ItemMovieBinding.inflate(parent.layoutInflater, parent, false)
     )
 
