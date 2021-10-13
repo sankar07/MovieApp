@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+	<data>
+
+		<variable
+			name="movie"
+			type="com.codeheros.movieapp.model.Movie"/>
+	</data>
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/movieRootLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/material_design_image_list_padding"
+		android:layout_marginEnd="@dimen/material_design_image_list_padding"
+		android:background="?android:selectableItemBackground">
+		
+		
+		<com.facebook.drawee.view.SimpleDraweeView
+			android:id="@+id/moviePoster"
+			posterURL="@{movie.posterURL}"
+			android:layout_width="@dimen/match_constraints"
+			android:layout_height="@dimen/item_movie_poster_width"
+			android:layout_margin="@dimen/item_movie_poster_corner_radius"
+			android:adjustViewBounds="true"
+			android:elevation="@dimen/item_movie_posteR_elevation"
+			android:focusableInTouchMode="true"
+			android:transitionName="moviePosterView"
+			app:actualImageScaleType="fitXY"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintEnd_toStartOf="@id/guideLine"
+			app:roundedCornerRadius="8dp"
+			app:viewAspectRatio="1"/>
+		
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/guideLine"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintGuide_percent=".3"
+			android:orientation="vertical"/>
+		
+		<TextView
+			android:id="@+id/movieTitleTextView"
+			android:layout_width="@dimen/match_constraints"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/item_movie_text_margin"
+			android:layout_marginEnd="@dimen/item_movie_text_margin"
+			android:singleLine="true"
+			android:text="@{movie.title}"
+			android:textColor="?android:textColorPrimary"
+			android:textStyle="bold"
+			android:layout_marginLeft="@dimen/fragment_movie_list_search_bar_margin_vertical"
+			app:layout_constraintStart_toEndOf="@id/guideLine"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			tools:text="Spider-Man: Far from home"/>
+		
+		<TextView
+			android:id="@+id/dateTextView"
+			android:layout_width="@dimen/match_constraints"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/item_movie_text_margin"
+			android:layout_marginEnd="@dimen/item_movie_text_margin"
+			android:maxLines="1"
+			android:text="@{movie.releaseDate}"
+			android:textColor="?android:textColorPrimary"
+			android:textSize="12sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginLeft="@dimen/fragment_movie_list_search_bar_margin_vertical"
+			app:layout_constraintStart_toEndOf="@id/guideLine"
+			app:layout_constraintTop_toBottomOf="@+id/movieTitleTextView"
+			tools:text="July 19, 2019"/>
+		
+		<TextView
+			android:id="@+id/ratingTextView"
+			android:layout_width="@dimen/match_constraints"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="@dimen/item_movie_text_margin"
+			android:layout_marginEnd="@dimen/item_movie_text_margin"
+			android:drawableStart="@drawable/ic_favorite_border_accent_24dp"
+			android:drawablePadding="@dimen/item_movie_text_margin"
+			android:drawableTint="?android:colorAccent"
+			android:gravity="center_vertical"
+			android:text="@{movie.rating}"
+			android:textColor="?android:textColorSecondary"
+			android:textSize="12sp"
+			android:layout_marginLeft="@dimen/fragment_movie_list_search_bar_margin_vertical"
+			app:layout_constraintStart_toEndOf="@id/guideLine"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/dateTextView"
+			tools:targetApi="m"
+			tools:text="100%"/>
+	</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
